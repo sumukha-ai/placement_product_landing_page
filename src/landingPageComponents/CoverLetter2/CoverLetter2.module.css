@@ -1,0 +1,162 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+  padding: 6rem 2rem;
+  flex-wrap: wrap;
+  background: var(--background-color);
+}
+
+/* Left: Animated Templates */
+.left {
+  flex: 1;
+  min-width: 320px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.stackContainer {
+  position: relative;
+  width: 400px;
+  height: 500px;
+  perspective: 1000px;
+}
+
+.card {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 16px;
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.card1 { animation: slideZoom 12s infinite; z-index: 4; }
+.card2 { animation: slideZoom 12s infinite 3s; z-index: 3; }
+.card3 { animation: slideZoom 12s infinite 6s; z-index: 2; }
+.card4 { animation: slideZoom 12s infinite 9s; z-index: 1; }
+
+@keyframes slideZoom {
+  0%, 100% { opacity: 0; transform: scale(0.95); }
+  5%, 25% { opacity: 1; transform: scale(1); }
+  35% { opacity: 0; transform: translateY(-40px) scale(0.9); }
+}
+
+/* Animated Abstract Blob Background */
+.blobBackground {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(
+    circle at 40% 40%,
+    var(--primary-light),
+    transparent 70%
+  );
+  filter: blur(100px);
+  z-index: 0;
+  top: -100px;
+  left: -100px;
+}
+
+/* Right: UI Mockup */
+.right {
+  flex: 1;
+  min-width: 300px;
+  max-width: 520px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  z-index: 1;
+}
+
+.heading {
+  font-size: 2.25rem;
+  font-weight: 800;
+  margin-bottom: 2rem;
+  background: var(--text-grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.heading span {
+  color: var(--secondary-main);
+}
+
+.uiSteps {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: var(--grey-50);
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.stepIcon {
+  font-size: 1.75rem;
+  color: var(--primary-main);
+}
+
+.stepBox h4 {
+  font-size: 1.1rem;
+  margin: 0;
+  color: var(--grey-900);
+}
+
+.stepBox p {
+  margin: 0.25rem 0 0;
+  font-size: 0.95rem;
+  color: var(--grey-700);
+}
+
+.ctaButton {
+  background: var(--text-grad);
+  color: white;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.ctaButton:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.05);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .right {
+    align-items: center;
+  }
+
+  .uiSteps {
+    align-items: center;
+  }
+
+  .step {
+    flex-direction: column;
+    text-align: center;
+  }
+}

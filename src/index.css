@@ -1,0 +1,43 @@
+@import './vars.css';
+@import './globalStyles.css';
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "lato";
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  display: none;
+}
+
+
+
+:global {
+  .gradButton {
+    background: linear-gradient(
+      120deg,
+      var(--primary-dark),
+      var(--secondary-main)
+    );
+    color: var(--background-light);
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.3s ease;
+  }
+  .gradButton:hover {
+    background-color: var(--primary-active);
+  }
+}

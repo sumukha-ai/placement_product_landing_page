@@ -1,0 +1,85 @@
+.hero {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 4rem 2rem;
+    background-color: var(--background-color);  /* Main background color */
+    color: var(--text-darker);  /* Primary text color */
+    text-align: left;
+    
+}
+
+.heroContent {
+    flex: 1;
+    max-width: 700px;
+}
+
+.heroText h1 {
+    font-size: 2.5rem;
+    color: var(--text-neutral-black);  /* Header color using primary color */
+    margin-bottom: 1rem;
+}
+
+.heroText p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-neutral-black-light);  /* Primary text color */
+}
+
+.ctaButton {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: var(--color-accent);  /* Accent color */
+    color: var(--background-light);  /* Light text on button */
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+.ctaButton:hover {
+    background-color: var(--color-primary);  /* Primary color on hover */
+}
+
+.heroAnimation {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 600px; /* Limit animation size */
+}
+
+.heroAnimation > div {
+    width: 100%;
+    height: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .heroText {
+        margin-bottom: 2rem;
+    }
+
+    .heroText h1 {
+        font-size: 2rem;
+    }
+
+    .heroText p {
+        font-size: 1rem;
+    }
+
+    .ctaButton {
+        font-size: 1rem;
+        padding: 0.8rem 1.5rem;
+    }
+
+    .heroAnimation {
+        width: 80%;
+    }
+}

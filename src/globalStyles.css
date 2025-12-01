@@ -1,0 +1,16 @@
+.gradButton{
+  background: linear-gradient(
+    120deg,
+    var(--primary-dark),
+    var(--secondary-main)
+  );
+  color: var(--background-light);
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+.button:hover {
+  background-color: var(--primary-active);
+}

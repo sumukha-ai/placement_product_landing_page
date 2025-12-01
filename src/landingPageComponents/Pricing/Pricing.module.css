@@ -1,0 +1,161 @@
+.pricingSection {
+  background-color: var(--background-color);
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.title {
+  color: var(--text-darker);
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  color: var(--text-dark);
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
+}
+
+.cardContainer {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+  cursor: default;
+}
+
+.card {
+  background-color: var(--background-light);
+  border-radius: 14px;
+  padding: 2.5rem;
+  max-width: 320px;
+  border: 1px solid var(--primary-light);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+  opacity: 0;
+}
+
+.highlight {
+  color: var(--text-light);
+  /* border: 2px solid var(--primary-main); */
+  background-color: var(--secondary-dark);
+  box-shadow: 0 8px 20px rgba(143, 125, 255, 0.2);
+}
+
+.highlight > .planTitle,
+.highlight > .tagline,
+.highlight > .price,
+.highlight .description,
+.highlight .features,
+.highlight .features li::before {
+  color: var(--text-light);
+}
+
+.highlight .button {
+  background-color: white;/* Bright secondary color for the button */
+  color: var(--secondary-dark); /* Text in light color to contrast against the darker background */ 
+  border-radius: 8px; /* Rounded corners for a clean, modern look */
+  cursor: pointer;
+
+}
+
+
+.highlight .button:hover {
+  background-color: var(--secondary-100); /* Darken the background color on hover for interactivity */
+   /* Brighten the border to match the new background */
+}
+
+.highlight .button:active {
+  background-color: var(--secondary-900); /* Darker secondary color when the button is clicked */
+  box-shadow: 0 2px 10px rgba(50, 111, 180, 0.5); /* Reduce shadow on active state */
+  transform: translateY(1px); /* Simulate pressing effect */
+}
+
+.planTitle {
+  font-size: 1.75rem;
+  color: var(--text-darker);
+  margin-bottom: 0.25rem;
+}
+
+.tagline {
+  color: var(--primary-dark);
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.price {
+  font-size: 2rem;
+  color: var(--primary-main);
+  margin: 0.5rem 0;
+}
+
+.description {
+  color: var(--text-dark);
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+  min-height: 48px;
+}
+
+.features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem 0;
+  color: var(--text-dark);
+  text-align: left;
+}
+
+.features li {
+  margin-bottom: 0.5rem;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.features li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--primary-dark);
+  font-weight: bold;
+}
+
+.button {
+  margin-top: auto;
+  background-color: var(--secondary-dark);
+  color: var(--background-light);
+  border: none;
+  padding: 1rem 4rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button:hover {
+  background-color: var(--primary-active);
+  transform: scale(1.01);
+}
+
+.button{
+  font-size: 20px;
+  letter-spacing: 0.03rem;
+}
+
+/* 🔁 Responsive Design */
+@media screen and (max-width: 1024px) {
+  .cardContainer {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .cardContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    max-width: 100%;
+    width: 100%;
+  }
+}

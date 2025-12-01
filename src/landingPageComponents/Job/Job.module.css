@@ -1,0 +1,97 @@
+.jobSection {
+  background-color: var(--background-light);
+  background: linear-gradient(275deg, 
+    rgba(249, 250, 251, 0.95) 0%, 
+    rgba(235, 241, 249, 0.85) 25%, 
+    rgba(255, 255, 255, 0.90) 50%, 
+    rgba(245, 248, 252, 0.90) 100%); /* Soft gradient with 4 colors from vars.css */
+  padding: 4rem 2rem;
+  text-align: center;
+  color: var(--text-darker);
+}
+
+.title {
+  font-size: 2.25rem;
+  color: var(--text-darker);
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.description {
+  font-size: 1.1rem;
+  color: var(--text-dark);
+  margin: 0 auto 2.5rem;
+  max-width: 800px;
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+.cardContainer {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  cursor: default;
+}
+
+.card {
+  background-color: var(--background-light);
+  border-radius: 12px;
+  padding: 2.5rem;
+  max-width: 320px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+}
+
+.iconContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+  color: var(--primary-main);
+}
+
+.cardTitle {
+  font-size: 1.25rem;
+  color: var(--text-darker);
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.cardDescription {
+  font-size: 1rem;
+  color: var(--text-dark);
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+@media (max-width: 1024px) {
+  .cardContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 1.75rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+
+  .cardTitle {
+    font-size: 1.15rem;
+  }
+
+  .cardDescription {
+    font-size: 0.95rem;
+  }
+}

@@ -1,0 +1,55 @@
+.jobAlertWrapper {
+  margin-top: 3rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  overflow: hidden;
+  min-height: 180px;
+}
+
+/* Base alert card */
+.jobAlert {
+  background: #ffffff;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  color: var(--grey-900);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  opacity: 1;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  position: relative;
+}
+
+/* Animate new alert */
+.fadeInNew {
+  animation: fadeInPop 0.4s ease forwards;
+}
+
+/* Animate exit (slide out left) */
+.slideOutLeft {
+  animation: slideLeft 0.4s ease forwards;
+}
+
+/* Keyframes */
+@keyframes fadeInPop {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes slideLeft {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-120%);
+  }
+}

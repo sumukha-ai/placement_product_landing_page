@@ -1,0 +1,191 @@
+/* ResumeDisplay.module.css */
+
+.resumeDisplay {
+  display: flex;
+  max-width: 1100px;
+  margin: 2rem auto;
+  gap: 2rem;
+  align-items: flex-start;
+  padding: 0 1rem;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Soft, blurred blobs behind the image preview */
+.resumeDisplay::before,
+.resumeDisplay::after {
+  overflow: hidden;
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.25;
+  z-index: 0;
+}
+
+.resumeDisplay::before {
+  overflow: hidden;
+  width: 350px;
+  height: 350px;
+  background: var(--primary-light);
+  top: -60px;
+  left: -60px;
+}
+
+.resumeDisplay::after {
+  overflow: hidden;
+  width: 300px;
+  height: 300px;
+  background: var(--secondary-light);
+  bottom: -60px;
+  right: -40px;
+}
+
+/* Desktop: category list on the left */
+.categoryList {
+  flex: 0 0 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  overflow-y: auto;
+  padding-right: 0.5rem;
+  z-index: 10;
+  /* border-right: 2px solid var(--primary-light); */
+}
+
+/* Scrollbar styling */
+.categoryList::-webkit-scrollbar {
+  width: 6px;
+}
+.categoryList::-webkit-scrollbar-thumb {
+  background-color: var(--primary-main);
+  border-radius: 3px;
+}
+.categoryList::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.categoryButton {
+  background: transparent;
+  border: 2px solid var(--primary-main);
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--primary-main);
+  cursor: pointer;
+  text-align: left;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.categoryButton:hover {
+  background-color: var(--primary-light);
+}
+
+.categoryButton.active {
+  background: var(--primary-main);
+  color: white;
+  border-color: var(--primary-main);
+}
+
+/* Mobile dropdown */
+.categoryDropdown {
+  display: none;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto 2rem auto;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 2px solid var(--primary-main);
+  color: var(--primary-main);
+  font-weight: 600;
+  background-color: white;
+  cursor: pointer;
+}
+
+/* Image preview area */
+.imagePreview {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 90%;
+  overflow: hidden;
+  border-radius: 16px;
+  /* box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1); */
+  background: var(--background-light);
+}
+
+.resumeImage {
+  max-height: 120vh;
+  width: auto;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.fadeIn {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Responsive: switch to column & dropdown on small screens */
+@media (max-width: 768px) {
+  .resumeDisplay {
+    overflow: hidden;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .categoryList {
+    display: none;
+    overflow-y: hidden;
+  }
+
+  .categoryDropdown {
+    display: block;
+  }
+
+  .imagePreview {
+    width: 100%;
+  }
+  .resumeImage {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.resumeIntro {
+  margin-top: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--text-light);
+}
+
+.heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  background-clip: text;
+  background: var(--text-grad);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0.5rem;
+}
+
+.tagline {
+  font-size: 1.125rem;
+  font-weight: 400;
+  color: var(--text-dark);
+  max-width: 700px;
+  margin: 0 auto;
+}
