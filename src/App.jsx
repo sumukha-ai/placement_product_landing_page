@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, useParams, Navigate } from 'rea
 import LandingPage from './pages/landingPage/LandingPage';
 import ContactPage from './pages/ContactPage';
 import LoginPage from './pages/LoginPage';
+import NotFound from './pages/NotFound';
 import { getCollegeBySlug } from './config';
 import './index.css';
 import './globalStyles.css';
@@ -67,8 +68,8 @@ function App() {
         {/* College redirect route - /:collegeSlug will redirect to the college's URL */}
         <Route path="/:collegeSlug" element={<CollegeRedirect />} />
         
-        {/* Catch all - redirect to landing page */}
-        <Route path="*" element={<Navigate to="/" replace />} />
+        {/* Catch all - show 404 page */}
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
   );
