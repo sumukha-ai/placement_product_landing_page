@@ -20,7 +20,7 @@ const HeroOld = () => {
                     <a
                         href="/login"
                         className={styles.ctaButton}
-                        aria-label="Start building your resume with ResumeBot on WhatsApp"
+                        aria-label="Start building your resume with Hire Camp on WhatsApp"
                         rel="noopener noreferrer"
                     >
                         Get Started on WhatsApp →

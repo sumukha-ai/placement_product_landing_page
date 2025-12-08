@@ -9,7 +9,7 @@ import {
   Linkedin,
 } from 'lucide-react';
 import { LanguageOutlined } from '@mui/icons-material';
-
+import logoImage from '../../assets/logo/wl.png'; // Update the path as necessary
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   const navigate = useNavigate();
@@ -48,8 +48,9 @@ const Footer = () => {
         <div className={styles.topSection}>
           <div className={styles.brandSection}>
             <div className={styles.logo}>
-              <div className={styles.logoIcon}>PB</div>
-              <span className={styles.logoText}>Placement Bot</span>
+              {/* <div className={styles.logoIcon}>HC</div> */}
+<img src={logoImage} alt="Hire Camp Logo" className={styles.logoImage} />
+              {/* <span className={styles.logoText}>Hire Camp</span> */}
             </div>
             <p className={styles.tagline}>
               Empowering colleges with AI-powered placement management.
@@ -115,7 +116,7 @@ const Footer = () => {
         {/* Bottom Section */}
         <div className={styles.bottomSection}>
           <p className={styles.copyright}>
-            © {currentYear} Placement Bot by Sumukha AI. All rights reserved.
+            © {currentYear} Hire Camp by Sumukha AI. All rights reserved.
           </p>
 
           <div className={styles.contactSection}>

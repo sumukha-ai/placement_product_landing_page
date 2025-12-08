@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import styles from './NavbarPreLogin.module.css';
 import { Menu, X } from 'lucide-react';
-
+import logoImage from '../../assets/logo/lh.png'; // Update the path as necessary
 const NavbarPreLogin = () => {
     const [isOpen, setIsOpen] = useState(false);
-    const [logoImage] = useState(null); // Set to null or import image path if available
+    // const [logoImage] = useState(null); // Set to null or import image path if available
 
     const toggleMenu = () => setIsOpen(!isOpen);
     const closeMenu = () => setIsOpen(false);
@@ -18,16 +18,16 @@ const NavbarPreLogin = () => {
                     <NavLink
                         to="/"
                         className={styles.logo}
-                        aria-label="The Placement Hub Homepage"
+                        aria-label="Hire Camp Homepage"
                     >
                         {logoImage && (
                             <img
                                 src={logoImage}
-                                alt="The Placement Hub Logo"
+                                alt="Hire Camp Logo"
                                 className={styles.logoImage}
                             />
                         )}
-                        <span className={styles.logoText}>The Placement Hub</span>
+                        {/* <span className={styles.logoText}>Hire Camp</span> */}
                     </NavLink>
                 </div>
 

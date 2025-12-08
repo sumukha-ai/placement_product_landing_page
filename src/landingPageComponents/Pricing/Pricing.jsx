@@ -62,7 +62,7 @@ const Pricing = () => {
     >
       <h2 className={styles.title}>Choose Your Plan</h2>
       <p className={styles.subtitle}>
-        ResumeBot offers tailored plans for every stage of your career.
+        Hire Camp offers tailored plans for every stage of your career.
       </p>
 
       <div className={styles.cardContainer}>

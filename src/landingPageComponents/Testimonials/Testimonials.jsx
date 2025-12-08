@@ -8,7 +8,7 @@ const testimonialsData = [
   {
     name: "John Doe",
     position: "Software Engineer",
-    text: "ResumeBot completely transformed my job search! The resume builder and AI-powered mock interviews were game-changers for me.",
+    text: "Hire Camp completely transformed my job search! The resume builder and AI-powered mock interviews were game-changers for me.",
     avatar: "https://i.ibb.co/6RGgwRNP/del.jpg",
     rating: 5,
   },

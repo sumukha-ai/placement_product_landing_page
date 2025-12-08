@@ -7,7 +7,7 @@ import { Plus, X } from 'lucide-react';
 
 const faqs = [
   {
-    question: 'How quickly can we get started with Placement Bot?',
+    question: 'How quickly can we get started with Hire Camp?',
     answer: 'Most colleges are up and running within 24 hours. Our onboarding team will help you import student data, set up your dashboard, and train your team—all in a single day.',
   },
   {

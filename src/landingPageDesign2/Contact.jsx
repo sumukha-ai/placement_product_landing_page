@@ -119,7 +119,7 @@ const Contact = () => {
             <span className={styles.gradient}> Placement Process?</span>
           </h1>
           <p className={styles.description}>
-            Schedule a personalized demo and discover how Placement Bot can revolutionize your institution's placement management.
+            Schedule a personalized demo and discover how Hire Camp can revolutionize your institution's placement management.
           </p>
         </div>
 
