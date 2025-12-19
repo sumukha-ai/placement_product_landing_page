@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import styles from './NavbarPreLogin.module.css';
 import { Menu, X } from 'lucide-react';
-import logoImage from '../../assets/logo/lsh.png'; // Update the path as necessary
+import logoImage from '../../assets/logo/finallogo.png'; // Update the path as necessary
 const NavbarPreLogin = () => {
     const [isOpen, setIsOpen] = useState(false);
     // const [logoImage] = useState(null); // Set to null or import image path if available

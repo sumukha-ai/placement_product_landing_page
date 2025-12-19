@@ -9,7 +9,7 @@ import {
   Linkedin,
 } from 'lucide-react';
 import { LanguageOutlined } from '@mui/icons-material';
-import logoImage from '../../assets/logo/wl.png'; // Update the path as necessary
+import logoImage from '../../assets/logo/whitelogo.png'; // Update the path as necessary
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   const navigate = useNavigate();
