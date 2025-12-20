@@ -5,9 +5,16 @@ import ContactPage from './pages/ContactPage';
 import LoginPage from './pages/LoginPage';
 import NotFound from './pages/NotFound';
 import { getCollegeBySlug } from './config';
+import useScrollToTop from './hooks/useScrollToTop';
 import './index.css';
 import './globalStyles.css';
 import './vars.css';
+
+// Scroll to top on route change
+const ScrollToTop = () => {
+  useScrollToTop();
+  return null;
+};
 
 // College redirect component
 const CollegeRedirect = () => {
@@ -55,6 +62,7 @@ const CollegeRedirect = () => {
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Routes>
         {/* Landing Page */}
         <Route path="/" element={<LandingPage />} />

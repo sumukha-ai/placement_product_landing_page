@@ -3,8 +3,8 @@ import React, { useEffect, useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './Hero.module.css';
 import { ArrowForward, PlayArrow, Close } from '@mui/icons-material';
-import heroVideo from '../assets/hero/2.mp4';
-import demoVideo from '../assets/hero/demo.mp4'; // Your full demo video
+import heroVideo from '../assets/hero/shortdemo.mp4';
+import demoVideo from '../assets/hero/fulldemo.mp4'; // Your full demo video
 
 
 
@@ -60,6 +60,9 @@ const Hero = () => {
 
   // Handle modal open
   const handleOpenModal = () => {
+    if (videoRef.current) {
+      videoRef.current.pause();
+    }
     setIsModalOpen(true);
     document.body.style.overflow = 'hidden'; // Prevent background scroll
   };

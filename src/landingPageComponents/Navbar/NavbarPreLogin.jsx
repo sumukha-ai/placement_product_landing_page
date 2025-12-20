@@ -33,6 +33,14 @@ const NavbarPreLogin = () => {
 
                 {/* Desktop Navigation */}
                 <div className={styles.desktopNav}>
+                    {/* Contact Us Link */}
+                    <NavLink
+                        to="/contact"
+                        className={styles.contactLink}
+                    >
+                        Contact Us
+                    </NavLink>
+                    
                     {/* Login Button */}
                     <NavLink
                         to="/login"
@@ -61,6 +69,14 @@ const NavbarPreLogin = () => {
             {/* Mobile Navigation */}
             {isOpen && (
                 <div className={styles.mobileNav} id="mobile-menu">
+                    <NavLink
+                        to="/contact"
+                        className={styles.mobileContactLink}
+                        onClick={closeMenu}
+                    >
+                        Contact Us
+                    </NavLink>
+                    
                     <NavLink
                         to="/login"
                         className={styles.mobileLoginBtn}

@@ -21,6 +21,7 @@ import {
 import aiInterviewImage from '../../assets/feature/ai_int.png';
 import whatsappGif from '../../assets/feature/wa.png';
 import dashboardImage from '../../assets/feature/dash.png';
+import { WhatsApp } from '@mui/icons-material';
 
 const Features = () => {
     const [imageErrors, setImageErrors] = useState({
@@ -63,7 +64,7 @@ const Features = () => {
             image: whatsappGif,
             imageAlt: 'WhatsApp Notification System',
             fallbackText: 'WhatsApp',
-            icon: MessageCircle,
+            icon: WhatsApp,
             color: '#25D366',
             lightColor: '#e2f9edff', // Light green
             gradient: 'linear-gradient(135deg, #25D366 0%, #34D399 100%)',

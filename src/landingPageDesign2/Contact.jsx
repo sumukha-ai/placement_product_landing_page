@@ -1,5 +1,6 @@
 // src/pages/Contact.jsx
 import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import styles from './Contact.module.css';
@@ -49,13 +50,14 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate API call
-    setTimeout(() => {
+    try {
+      const response = await axios.post("https://contact-us-sumukha.vercel.app/hirecamp/contact", formData);
+      
       setStatus({
         type: 'success',
         message: 'Thank you! We\'ll get back to you within 24 hours.'
       });
-      setIsSubmitting(false);
+      
       setFormData({
         name: '',
         email: '',
@@ -72,28 +74,35 @@ const Contact = () => {
       setTimeout(() => {
         setStatus({ type: '', message: '' });
       }, 5000);
-    }, 2000);
+    } catch (error) {
+      setStatus({
+        type: 'error',
+        message: error.response?.data?.message || 'Failed to submit form. Please try again.'
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const contactMethods = [
     {
       icon: Mail,
       label: 'Email Us',
-      value: 'hello@placementbot.com',
-      href: 'mailto:hello@placementbot.com',
+      value: 'reach@hirecamp.ai',
+      href: 'mailto:reach@hirecamp.ai',
       color: '#6366F1'
     },
     {
       icon: Phone,
       label: 'Call Us',
-      value: '+91 98765 43210',
-      href: 'tel:+919876543210',
+      value: '+919591691283',
+      href: 'tel:+919591691283',
       color: '#10B981'
     },
     {
       icon: MapPin,
       label: 'Visit Us',
-      value: 'Bangalore, Karnataka',
+      value: 'Bengaluru, Karnataka',
       color: '#F59E0B'
     }
   ];
@@ -101,7 +110,7 @@ const Contact = () => {
   const benefits = [
     'Personalized 30-minute demo',
     'Custom pricing for your institution',
-    'Free 14-day trial access',
+    'Free 7-day trial access',
     'Dedicated onboarding support'
   ];
 

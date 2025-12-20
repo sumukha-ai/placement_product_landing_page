@@ -123,6 +123,25 @@
   transform: translateY(0);
 }
 
+/* Contact Us Link */
+.contactLink {
+  padding: 0.65rem 1.35rem;
+  color: var(--text-dark);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-family: "lato";
+  display: inline-block;
+  border-radius: 0.75rem;
+}
+
+.contactLink:hover {
+  color: var(--primary-main);
+  background: rgba(99, 102, 241, 0.08);
+}
+
 /* Mobile Menu Button */
 .hamburger {
   display: none;
@@ -199,6 +218,25 @@
 
 .mobileLoginBtn:hover {
   box-shadow: 0 12px 24px rgba(99, 102, 241, 0.3);
+}
+
+.mobileContactLink {
+  padding: 0.75rem 1.5rem;
+  color: var(--text-dark);
+  border-radius: 0.75rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  font-family: "lato";
+  text-align: center;
+  display: block;
+}
+
+.mobileContactLink:hover {
+  background: rgba(99, 102, 241, 0.08);
+  color: var(--primary-main);
 }
 
 /* Responsive Design */

@@ -37,7 +37,7 @@ const Footer = () => {
   };
 
   const socialLinks = [
-    { icon: Linkedin, url: 'https://linkedin.com', label: 'LinkedIn' },
+    { icon: Linkedin, url: 'https://linkedin.com/company/hirecamp-ai', label: 'LinkedIn' },
     { icon: LanguageOutlined, url: 'https://sumukha.ai', label: 'Website' },
   ];
 
@@ -122,19 +122,19 @@ const Footer = () => {
           <div className={styles.contactSection}>
             <div className={styles.contactItem}>
               <Mail size={16} strokeWidth={2} />
-              <a href="mailto:hello@placementbot.com" className={styles.contactLink}>
-                hello@placementbot.com
+              <a href="mailto:reach@hirecamp.ai" className={styles.contactLink}>
+                reach@hirecamp.ai
               </a>
             </div>
             <div className={styles.contactItem}>
               <Phone size={16} strokeWidth={2} />
-              <a href="tel:+911234567890" className={styles.contactLink}>
-                +91 123 456 7890
+              <a href="tel:+919591691283" className={styles.contactLink}>
+                +91 959 169 1283
               </a>
             </div>
             <div className={styles.contactItem}>
               <MapPin size={16} strokeWidth={2} />
-              <span className={styles.contactText}>Bangalore, India</span>
+              <span className={styles.contactText}>Bengaluru, India</span>
             </div>
           </div>
         </div>
