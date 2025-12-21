@@ -118,9 +118,9 @@ const Hero = () => {
           <div className={styles.ctaGroup}>
             <button 
               className={styles.primaryBtn}
-              onClick={() => navigate('/register')}
+              onClick={() => navigate('/contact')}
             >
-              Get Started Free
+              Get Started Now
               <ArrowForward className={styles.btnIcon} />
             </button>
             <button 

@@ -28,7 +28,7 @@ const Footer = () => {
     product: [
       { name: 'Features', hash: '#features' },
       { name: 'Pricing', hash: '#pricing' },
-      { name: 'Demo', path: '/contact' },
+      { name: 'Request Demo', path: '/contact' },
     ],
     company: [
       { name: 'About Us', path: '/about' },
@@ -116,7 +116,7 @@ const Footer = () => {
         {/* Bottom Section */}
         <div className={styles.bottomSection}>
           <p className={styles.copyright}>
-            © {currentYear} Hire Camp by Sumukha AI. All rights reserved.
+            © {currentYear} Hire Camp by <a href="https://sumukha.ai" target="_blank" rel="noopener noreferrer" className={styles.sumukhaLink}>Sumukha AI</a>. All rights reserved.
           </p>
 
           <div className={styles.contactSection}>

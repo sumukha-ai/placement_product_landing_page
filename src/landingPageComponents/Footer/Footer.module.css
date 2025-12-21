@@ -355,3 +355,15 @@
   color: white;
   transform: translateX(4px);
 }
+
+
+.sumukhaLink {
+  color: rgba(203, 213, 225, 0.85);
+  text-decoration: underline;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.sumukhaLink:hover {
+  color: white;
+}
