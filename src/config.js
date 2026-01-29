@@ -1,11 +1,11 @@
 ﻿// College configuration with redirect URLs
 export const colleges = [
   {
-    id: 'rvce',
-    name: 'RV College of Engineering',
-    slug: 'rvce',
+    id: 'JICM',
+    name: 'Jyothy Institute of Commerce and Management',
+    slug: 'jicm',
     redirect_url: 'https://sumukhaai.com',
-    logo: '/logos/rvce.png'
+    logo: '/logos/jicm.png'
   },
   {
     id: 'bnmit',
