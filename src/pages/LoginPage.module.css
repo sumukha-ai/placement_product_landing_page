@@ -413,3 +413,11 @@
     padding: 0.875rem 1.25rem;
   }
 }
+
+
+.collegeLogo {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  margin-right: 0.75rem;
+}

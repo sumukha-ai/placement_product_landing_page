@@ -5,35 +5,34 @@ export const colleges = [
     name: 'Jyothy Institute of Commerce and Management',
     slug: 'jicm',
     redirect_url: 'https://sumukhaai.com',
-    logo: '/logos/jicm.png'
+    logo: 'src/assets/logos/jicm.png'
   },
   {
     id: 'bnmit',
     name: 'BNM Institute of Technology',
     slug: 'bnmit',
     redirect_url: 'https://sumukhaai.com',
-    logo: '/logos/bnmit.png'
   },
   {
     id: 'dsce',
     name: 'Dayananda Sagar College of Engineering',
     slug: 'dsce',
     redirect_url: 'https://sumukhaai.com',
-    logo: '/logos/dsce.png'
+    // logo: '/logos/dsce.png'
   },
   {
     id: 'sjbit',
     name: 'SJB Institute of Technology',
     slug: 'sjbit',
     redirect_url: 'https://sumukhaai.com',
-    logo: '/logos/sjbit.png'
+    // logo: '/logos/sjbit.png'
   },
   {
     id: 'msrit',
     name: 'MS Ramaiah Institute of Technology',
     slug: 'msrit',
     redirect_url: 'https://sumukhaai.com',
-    logo: '/logos/msrit.png'
+    // logo: '/logos/msrit.png'
   }
 ];
 

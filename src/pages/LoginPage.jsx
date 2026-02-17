@@ -84,6 +84,7 @@ const LoginPage = () => {
                         role="option"
                         aria-selected={selectedCollege === college.id}
                       >
+                        {college.logo && <img src={college.logo} alt={`${college.name} logo`} className={styles.collegeLogo} />}
                         <span className={styles.collegeName}>{college.name}</span>
                         {selectedCollege === college.id && (
                           <span className={styles.checkmark}>✓</span>
